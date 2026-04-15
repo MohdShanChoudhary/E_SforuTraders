@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #f0f0ee;
+}
+
+@media print {
+  /* Hide everything except invoice */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Remove URL, title, date from print */
+  @page {
+    margin: 5mm;
+    size: A4;
+  }
+
+  body {
+    background: white !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Remove browser header/footer URL */
+  html {
+    height: 100%;
+  }
+
+  /* Main content full width */
+  .main-content {
+    margin-left: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Invoice paper */
+  .invoice-paper {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    page-break-inside: avoid;
+  }
+
+  /* Compact font for print */
+  .invoice-paper * {
+    font-size: 10px !important;
+  }
+
+  .invoice-paper h1 {
+    font-size: 20px !important;
+  }
+
+  .invoice-paper .inv-title-bar {
+    font-size: 11px !important;
+  }
+}
