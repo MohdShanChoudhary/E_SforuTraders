@@ -1,22 +1,35 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://e-sforutraders.onrender.com', // 🔥 change if your backend runs on another port
+  baseURL: process.env.REACT_APP_API_URL || 'https://e-sforutraders.onrender.com',
   headers: {
     'Content-Type': 'application/json',
   },
 });
 
-// ✅ Attach token ONLY for protected routes
-API.interceptors.request.use((config) => {
-  const token = localStorage.getItem('token');
+API.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem('token');
 
-  // ❗ login request pe token mat bhejo
-  if (token && !config.url.includes('/login')) {
-    config.headers.Authorization = `Bearer ${token}`;
+    if (token && config.url !== '/login') {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
+
+API.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response?.status === 401) {
+      localStorage.removeItem('token');
+      window.location.href = '/login';
+    }
+
+    return Promise.reject(error);
   }
-
-  return config;
-});
+);
 
 export default API;
