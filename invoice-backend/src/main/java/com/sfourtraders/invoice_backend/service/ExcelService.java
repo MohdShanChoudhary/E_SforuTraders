@@ -1,6 +1,6 @@
-package com.sfourtraders.service;
+package com.sfourtraders.invoice_backend.service;
 
-import com.sfourtraders.model.Invoice;
+import com.sfourtraders.invoice_backend.model.Invoice;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.usermodel.*;

@@ -1,4 +1,4 @@
-package com.sfourtraders.config;
+package com.sfourtraders.invoice_backend.config;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

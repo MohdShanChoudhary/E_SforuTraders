@@ -1,0 +1,44 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: invoice-db
+    environment:
+      POSTGRES_DB: invoice_db
+      POSTGRES_USER: invoice_user
+      POSTGRES_PASSWORD: invoice_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U invoice_user -d invoice_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./invoice-backend
+    container_name: invoice-backend
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/invoice_db
+      SPRING_DATASOURCE_USERNAME: invoice_user
+      SPRING_DATASOURCE_PASSWORD: invoice_pass
+      ALLOWED_ORIGINS: http://localhost:3000,http://localhost:5173
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build:
+      context: ./invoice-frontend
+    container_name: invoice-frontend
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"
+
+volumes:
+  db_data:

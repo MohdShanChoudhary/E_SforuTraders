@@ -1,6 +1,6 @@
-package com.sfourtraders.controller;
+package com.sfourtraders.invoice_backend.controller;
 
-import com.sfourtraders.config.JwtUtil;
+import com.sfourtraders.invoice_backend.config.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;

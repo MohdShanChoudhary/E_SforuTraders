@@ -1,4 +1,4 @@
-package com.sfourtraders.model;
+package com.sfourtraders.invoice_backend.model;
 
 import jakarta.persistence.*;
 import lombok.Data;

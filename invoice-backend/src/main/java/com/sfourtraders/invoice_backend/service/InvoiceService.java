@@ -1,8 +1,8 @@
-package com.sfourtraders.service;
+package com.sfourtraders.invoice_backend.service;
 
-import com.sfourtraders.model.Invoice;
-import com.sfourtraders.model.InvoiceItem;
-import com.sfourtraders.repository.InvoiceRepository;
+import com.sfourtraders.invoice_backend.model.Invoice;
+import com.sfourtraders.invoice_backend.model.InvoiceItem;
+import com.sfourtraders.invoice_backend.repository.InvoiceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

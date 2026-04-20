@@ -1,4 +1,4 @@
-package com.sfourtraders.config;
+package com.sfourtraders.invoice_backend.config;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;

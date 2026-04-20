@@ -1,9 +1,9 @@
-package com.sfourtraders.controller;
+package com.sfourtraders.invoice_backend.controller;
 
-import com.sfourtraders.model.Invoice;
-import com.sfourtraders.service.InvoiceService;
-import com.sfourtraders.service.PdfService;
-import com.sfourtraders.service.ExcelService;
+import com.sfourtraders.invoice_backend.model.Invoice;
+import com.sfourtraders.invoice_backend.service.InvoiceService;
+import com.sfourtraders.invoice_backend.service.PdfService;
+import com.sfourtraders.invoice_backend.service.ExcelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;

@@ -1,9 +1,9 @@
-package com.sfourtraders.service;
+package com.sfourtraders.invoice_backend.service;
 
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.*;
-import com.sfourtraders.model.Invoice;
-import com.sfourtraders.model.InvoiceItem;
+import com.sfourtraders.invoice_backend.model.Invoice;
+import com.sfourtraders.invoice_backend.model.InvoiceItem;
 import org.springframework.stereotype.Service;
 import java.io.ByteArrayOutputStream;
 
