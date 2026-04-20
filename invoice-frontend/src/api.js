@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:8080', // 🔥 change if your backend runs on another port
+  baseURL: 'https://e-sforutraders.onrender.com', // 🔥 change if your backend runs on another port
   headers: {
     'Content-Type': 'application/json',
   },
