@@ -180,10 +180,10 @@ Default login credentials:
 
 ### Backend Configuration (`application.properties`)
 ```properties
-# Database
-spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
-spring.datasource.username=postgres
-spring.datasource.password=your_password
+# Production database (Supabase PostgreSQL)
+spring.datasource.url=jdbc:postgresql://aws-1-ap-southeast-1.pooler.supabase.com:5432/postgres?sslmode=require
+spring.datasource.username=postgres.gupesksjdhebaonvtrfx
+spring.datasource.password=your_supabase_password
 
 # JWT
 jwt.secret=SFourTradersSecretKey2024VeryLongStringForSecurity123456
@@ -201,7 +201,7 @@ app.password=sfour2024
 ### Frontend Configuration (`src/api.js`)
 ```javascript
 const API = axios.create({
-  baseURL: 'http://localhost:8080', // Change if backend port differs
+   baseURL: 'https://e-sforutraders.onrender.com', // Deployed backend API
   headers: {
     'Content-Type': 'application/json',
   },
@@ -274,6 +274,11 @@ npm install
 - `quantity`, `rate`, `value`
 
 ## 🚀 Deployment
+
+### Live Deployment Links
+- **Frontend (Vercel):** https://e-sforu-traders-git-master-mohd-shan-s-projects.vercel.app/
+- **Backend (Render):** https://e-sforutraders.onrender.com
+- **Database (Supabase PostgreSQL):** aws-1-ap-southeast-1.pooler.supabase.com:5432
 
 ### Backend Deployment
 ```bash
