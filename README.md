@@ -310,3 +310,12 @@ rm -rf node_modules package-lock.json && npm install
 
 <img width="1833" height="956" alt="Screenshot from 2026-06-05 16-41-54" src="https://github.com/user-attachments/assets/5d542422-de74-4d21-b06e-3eaa29024a4c" />
 
+
+
+<img width="1833" height="956" alt="Screenshot from 2026-06-05 16-42-02" src="https://github.com/user-attachments/assets/9005aa9c-6c07-420d-83c1-af10ebb9bc8a" />
+
+
+
+<img width="1833" height="956" alt="Screenshot from 2026-06-05 16-42-10" src="https://github.com/user-attachments/assets/cc706871-63b8-48fb-a58f-74f454678a22" />
+
+
