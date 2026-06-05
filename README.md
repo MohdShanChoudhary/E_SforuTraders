@@ -304,3 +304,9 @@ rm -rf node_modules package-lock.json && npm install
 <img src="https://capsule-render.vercel.app/api?type=waving&color=C0272D&height=100&section=footer" width="100%"/>
 
 </div>
+
+
+
+
+<img width="1833" height="956" alt="Screenshot from 2026-06-05 16-41-54" src="https://github.com/user-attachments/assets/5d542422-de74-4d21-b06e-3eaa29024a4c" />
+
